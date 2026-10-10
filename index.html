@@ -20,10 +20,9 @@
     body {
       font-family: Arial, Helvetica, sans-serif;
       background:
-        radial-gradient(circle at 80% 20%, rgba(0, 140, 255, 0.18), transparent 28%),
-        radial-gradient(circle at 20% 80%, rgba(0, 80, 255, 0.12), transparent 25%),
-        #05070b;
-      color: #ffffff;
+        radial-gradient(circle at 70% 10%, rgba(0, 140, 255, 0.15), transparent 28%),
+        linear-gradient(180deg, #05070b 0%, #07111c 100%);
+      color: #fff;
       overflow-x: hidden;
     }
 
@@ -33,28 +32,27 @@
       inset: 0;
       pointer-events: none;
       background-image:
-        linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+        linear-gradient(rgba(255,255,255,0.018) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.018) 1px, transparent 1px);
       background-size: 60px 60px;
-      mask-image: linear-gradient(to bottom, black, transparent 85%);
       z-index: 0;
+      mask-image: linear-gradient(to bottom, black, transparent 90%);
     }
 
     .mouse-light {
       position: fixed;
-      width: 420px;
-      height: 420px;
+      width: 450px;
+      height: 450px;
       border-radius: 50%;
       pointer-events: none;
       background: radial-gradient(
         circle,
-        rgba(0, 153, 255, 0.14) 0%,
-        rgba(0, 153, 255, 0.07) 30%,
-        transparent 70%
+        rgba(0, 174, 255, 0.12) 0%,
+        rgba(0, 174, 255, 0.06) 35%,
+        transparent 72%
       );
       transform: translate(-50%, -50%);
       z-index: 0;
-      transition: 0.06s linear;
     }
 
     header {
@@ -62,25 +60,25 @@
       top: 0;
       left: 0;
       width: 100%;
-      height: 78px;
+      height: 80px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 0 7%;
       background: rgba(5, 7, 11, 0.55);
-      backdrop-filter: blur(15px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
       z-index: 1000;
     }
 
     .logo {
-      font-size: 1.45rem;
-      font-weight: 700;
-      letter-spacing: 1px;
+      font-size: 1.55rem;
+      font-weight: 800;
+      letter-spacing: 0.5px;
     }
 
     .logo span {
-      color: #00a8ff;
+      color: #12b8ff;
     }
 
     nav {
@@ -89,79 +87,82 @@
     }
 
     nav a {
-      color: #b9c3d3;
+      color: #adb9c8;
       text-decoration: none;
-      font-size: 0.95rem;
       transition: 0.3s;
     }
 
     nav a:hover {
-      color: #ffffff;
+      color: #fff;
     }
 
     .hero {
       min-height: 100vh;
+      padding: 130px 7% 70px;
       display: grid;
       grid-template-columns: 1.05fr 0.95fr;
       align-items: center;
-      gap: 40px;
-      padding: 130px 7% 70px;
+      gap: 60px;
       position: relative;
       z-index: 1;
     }
 
     .hero-content {
-      max-width: 680px;
+      max-width: 720px;
     }
 
     .eyebrow {
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      padding: 8px 14px;
+      padding: 9px 15px;
+      border: 1px solid rgba(18,184,255,0.3);
       border-radius: 999px;
-      border: 1px solid rgba(0, 168, 255, 0.3);
-      background: rgba(0, 168, 255, 0.07);
-      color: #69cfff;
-      font-size: 0.85rem;
-      margin-bottom: 24px;
+      background: rgba(18,184,255,0.06);
+      color: #78d8ff;
+      font-size: 0.86rem;
+      margin-bottom: 25px;
     }
 
     .eyebrow::before {
       content: "";
       width: 8px;
       height: 8px;
-      background: #00a8ff;
       border-radius: 50%;
-      box-shadow: 0 0 18px #00a8ff;
+      background: #15c6ff;
+      box-shadow: 0 0 18px #15c6ff;
     }
 
     h1 {
-      font-size: clamp(3rem, 6vw, 6.5rem);
-      line-height: 0.95;
+      font-size: clamp(3.3rem, 5.8vw, 6.3rem);
+      line-height: 0.98;
       letter-spacing: -3px;
-      margin-bottom: 25px;
+      margin-bottom: 26px;
     }
 
     .gradient-text {
-      background: linear-gradient(90deg, #ffffff, #5cc8ff, #006eff);
+      background: linear-gradient(
+        90deg,
+        #ffffff 0%,
+        #77d8ff 42%,
+        #0d83ff 100%
+      );
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      background-clip: text;
     }
 
     .hero p {
-      color: #9ca9b9;
-      font-size: 1.1rem;
-      line-height: 1.7;
-      max-width: 590px;
-      margin-bottom: 35px;
+      max-width: 620px;
+      color: #9ba8b8;
+      font-size: 1.08rem;
+      line-height: 1.75;
+      margin-bottom: 34px;
     }
 
     .buttons {
       display: flex;
       flex-wrap: wrap;
-      gap: 16px;
+      gap: 14px;
     }
 
     .btn {
@@ -169,188 +170,315 @@
       padding: 15px 24px;
       border-radius: 12px;
       text-decoration: none;
-      font-weight: 600;
+      font-weight: 700;
       transition: 0.3s;
     }
 
     .btn-primary {
-      color: white;
-      background: linear-gradient(135deg, #0078ff, #00b8ff);
-      box-shadow: 0 0 35px rgba(0, 153, 255, 0.25);
+      color: #fff;
+      background: linear-gradient(135deg, #087cff, #13c4ff);
+      box-shadow: 0 0 30px rgba(19,196,255,0.18);
     }
 
     .btn-primary:hover {
       transform: translateY(-3px);
-      box-shadow: 0 0 45px rgba(0, 153, 255, 0.45);
+      box-shadow: 0 0 44px rgba(19,196,255,0.35);
     }
 
     .btn-secondary {
-      color: white;
-      border: 1px solid rgba(255,255,255,0.15);
-      background: rgba(255,255,255,0.03);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.025);
     }
 
     .btn-secondary:hover {
-      background: rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.07);
     }
 
     .hero-visual {
       position: relative;
-      height: 620px;
+      height: 650px;
       display: flex;
       align-items: center;
       justify-content: center;
-      perspective: 1200px;
+      perspective: 1500px;
     }
 
-    .robot-stage {
-      width: min(480px, 90%);
-      aspect-ratio: 0.82;
-      border-radius: 34px;
+    .visual-aura {
+      position: absolute;
+      width: 540px;
+      height: 540px;
+      border-radius: 50%;
+      background:
+        radial-gradient(
+          circle,
+          rgba(0, 180, 255, 0.14) 0%,
+          rgba(0, 110, 255, 0.08) 32%,
+          transparent 70%
+        );
+      filter: blur(10px);
+    }
+
+    .robot-shell {
       position: relative;
-      overflow: hidden;
+      width: min(470px, 92%);
+      height: 590px;
+      border-radius: 34px;
       transform-style: preserve-3d;
       transition: transform 0.15s ease-out;
+      overflow: hidden;
 
       background:
-        radial-gradient(circle at 50% 25%, rgba(0, 180, 255, 0.28), transparent 28%),
-        linear-gradient(160deg, rgba(8, 19, 33, 0.98), rgba(3, 8, 14, 0.9));
+        radial-gradient(circle at 50% 24%, rgba(0,185,255,0.2), transparent 23%),
+        linear-gradient(160deg, rgba(9,21,35,0.97), rgba(3,8,15,0.96));
 
-      border: 1px solid rgba(0, 168, 255, 0.2);
+      border: 1px solid rgba(0,179,255,0.2);
 
       box-shadow:
-        0 40px 120px rgba(0,0,0,0.55),
-        inset 0 0 50px rgba(0, 140, 255, 0.05);
+        0 45px 120px rgba(0,0,0,0.55),
+        inset 0 0 45px rgba(0,143,255,0.04);
     }
 
-    .robot-stage::before {
+    .robot-shell::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(0, 183, 255, 0.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 183, 255, 0.045) 1px, transparent 1px);
+      background-size: 42px 42px;
+    }
+
+    .robot-shell::after {
       content: "";
       position: absolute;
       inset: 0;
       background:
-        linear-gradient(transparent 97%, rgba(0,168,255,0.08) 100%),
-        linear-gradient(90deg, transparent 97%, rgba(0,168,255,0.08) 100%);
-      background-size: 50px 50px;
-      opacity: 0.5;
+        linear-gradient(
+          115deg,
+          transparent 0%,
+          rgba(255,255,255,0.06) 18%,
+          transparent 34%
+        );
+      transform: translateX(-120%);
+      animation: scan 5s ease-in-out infinite;
+    }
+
+    @keyframes scan {
+      0%, 20% { transform: translateX(-130%); }
+      65%, 100% { transform: translateX(130%); }
+    }
+
+    .robot {
+      position: absolute;
+      inset: 0;
+      transform-style: preserve-3d;
     }
 
     .robot-head {
       position: absolute;
-      top: 90px;
+      top: 82px;
       left: 50%;
-      width: 170px;
-      height: 190px;
-      transform: translateX(-50%);
-      border-radius: 45% 45% 38% 38%;
+      width: 180px;
+      height: 205px;
+      transform: translateX(-50%) translateZ(30px);
+      border-radius: 46% 46% 40% 40%;
       background:
-        linear-gradient(145deg, #dce6ef, #7f8f9f 45%, #283542 80%);
+        linear-gradient(145deg, #d3deea 0%, #8796a5 42%, #344250 72%, #192630 100%);
       box-shadow:
-        inset -18px -12px 30px rgba(0,0,0,0.28),
-        0 0 45px rgba(0,168,255,0.2);
+        inset -22px -16px 28px rgba(0,0,0,0.25),
+        0 0 30px rgba(0,190,255,0.12);
     }
 
     .robot-face {
       position: absolute;
-      top: 35px;
-      left: 50%;
-      width: 130px;
-      height: 90px;
-      transform: translateX(-50%);
-      border-radius: 40px;
-      background: #06111b;
-      border: 1px solid rgba(0,168,255,0.4);
-      box-shadow: inset 0 0 25px rgba(0,168,255,0.12);
-    }
-
-    .robot-eye {
-      position: absolute;
       top: 34px;
-      width: 28px;
-      height: 8px;
-      background: #00c8ff;
+      left: 50%;
+      width: 140px;
+      height: 102px;
+      transform: translateX(-50%);
+      border-radius: 44px 44px 38px 38px;
+      background:
+        linear-gradient(180deg, #08131e, #050a10);
+      border: 1px solid rgba(0,190,255,0.34);
+      box-shadow:
+        inset 0 0 26px rgba(0,191,255,0.1),
+        0 0 24px rgba(0,174,255,0.08);
+    }
+
+    .eye {
+      position: absolute;
+      top: 38px;
+      width: 30px;
+      height: 7px;
       border-radius: 20px;
-      box-shadow: 0 0 20px #00c8ff;
+      background: #14d0ff;
+      box-shadow:
+        0 0 15px #14d0ff,
+        0 0 30px rgba(20,208,255,0.5);
     }
 
-    .robot-eye.left {
-      left: 20px;
+    .eye.left {
+      left: 24px;
     }
 
-    .robot-eye.right {
-      right: 20px;
+    .eye.right {
+      right: 24px;
+    }
+
+    .sensor {
+      position: absolute;
+      bottom: 22px;
+      left: 50%;
+      width: 42px;
+      height: 3px;
+      transform: translateX(-50%);
+      border-radius: 20px;
+      background: rgba(51, 207, 255, 0.65);
+      box-shadow: 0 0 12px rgba(20,208,255,0.45);
     }
 
     .robot-neck {
       position: absolute;
-      top: 268px;
+      top: 274px;
       left: 50%;
       width: 76px;
-      height: 70px;
+      height: 74px;
       transform: translateX(-50%);
-      background: linear-gradient(90deg, #313e4c, #9aa9b7, #313e4c);
       border-radius: 10px;
+      background:
+        linear-gradient(90deg, #1b2632, #9aabb9, #263542);
     }
 
     .robot-body {
       position: absolute;
-      top: 318px;
+      top: 332px;
       left: 50%;
-      width: 300px;
-      height: 240px;
-      transform: translateX(-50%);
-      border-radius: 90px 90px 35px 35px;
+      width: 320px;
+      height: 245px;
+      transform: translateX(-50%) translateZ(20px);
+      border-radius: 100px 100px 28px 28px;
       background:
-        linear-gradient(140deg, #9caab8 0%, #455565 45%, #162331 100%);
+        linear-gradient(
+          135deg,
+          #a7b4c0 0%,
+          #5e6e7d 28%,
+          #263541 65%,
+          #15212b 100%
+        );
       box-shadow:
-        inset -20px -20px 40px rgba(0,0,0,0.3),
-        0 0 40px rgba(0,168,255,0.12);
+        inset -22px -20px 35px rgba(0,0,0,0.28),
+        0 0 35px rgba(0,167,255,0.09);
+    }
+
+    .robot-body::before {
+      content: "";
+      position: absolute;
+      width: 190px;
+      height: 1px;
+      left: 50%;
+      top: 55px;
+      transform: translateX(-50%);
+      background: linear-gradient(90deg, transparent, rgba(0,194,255,0.5), transparent);
     }
 
     .robot-core {
       position: absolute;
-      top: 72px;
+      top: 76px;
       left: 50%;
-      width: 72px;
-      height: 72px;
+      width: 82px;
+      height: 82px;
       transform: translateX(-50%);
       border-radius: 50%;
-      background: radial-gradient(circle, #98efff 0%, #00bfff 25%, #0067ff 48%, transparent 72%);
-      box-shadow: 0 0 55px #00a8ff;
+      background:
+        radial-gradient(circle at 50% 50%,
+          #d8fbff 0%,
+          #2be3ff 14%,
+          #008dff 34%,
+          #003b94 54%,
+          transparent 72%
+        );
+      box-shadow:
+        0 0 25px rgba(0,179,255,0.7),
+        0 0 60px rgba(0,115,255,0.35);
     }
 
-    .glow-orbit {
-      position: absolute;
-      width: 360px;
-      height: 360px;
-      border: 1px solid rgba(0, 168, 255, 0.22);
-      border-radius: 50%;
-      animation: spin 10s linear infinite;
-    }
-
-    .glow-orbit::before,
-    .glow-orbit::after {
+    .robot-core::before {
       content: "";
       position: absolute;
-      width: 12px;
-      height: 12px;
-      background: #00bfff;
+      inset: -14px;
       border-radius: 50%;
-      box-shadow: 0 0 25px #00bfff;
+      border: 1px solid rgba(0,191,255,0.24);
+      animation: pulse 2.4s ease-in-out infinite;
     }
 
-    .glow-orbit::before {
-      top: -6px;
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(0.95);
+        opacity: 0.4;
+      }
+      50% {
+        transform: scale(1.12);
+        opacity: 0.9;
+      }
+    }
+
+    .orbit {
+      position: absolute;
       left: 50%;
+      top: 50%;
+      width: 375px;
+      height: 375px;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      border: 1px solid rgba(0,173,255,0.18);
+      animation: rotateOrbit 12s linear infinite;
     }
 
-    .glow-orbit::after {
-      bottom: -6px;
-      left: 25%;
+    .orbit::before,
+    .orbit::after {
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #16ccff;
+      box-shadow: 0 0 20px #16ccff;
     }
 
-    @keyframes spin {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
+    .orbit::before {
+      left: 50%;
+      top: -5px;
+    }
+
+    .orbit::after {
+      left: 14%;
+      bottom: 40px;
+    }
+
+    @keyframes rotateOrbit {
+      from { transform: translate(-50%, -50%) rotate(0deg); }
+      to { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+
+    .particle {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: #14cfff;
+      box-shadow: 0 0 12px #14cfff;
+      animation: floatParticle 5s ease-in-out infinite;
+    }
+
+    .p1 { top: 18%; left: 15%; animation-delay: 0s; }
+    .p2 { top: 30%; right: 13%; animation-delay: 1s; }
+    .p3 { bottom: 24%; left: 12%; animation-delay: 2s; }
+    .p4 { bottom: 17%; right: 16%; animation-delay: 3s; }
+
+    @keyframes floatParticle {
+      0%, 100% { transform: translateY(0); opacity: 0.35; }
+      50% { transform: translateY(-18px); opacity: 1; }
     }
 
     section {
@@ -360,12 +488,12 @@
     }
 
     .section-title {
-      max-width: 700px;
-      margin-bottom: 45px;
+      max-width: 720px;
+      margin-bottom: 46px;
     }
 
     .section-title span {
-      color: #00b8ff;
+      color: #16c9ff;
       font-size: 0.85rem;
       text-transform: uppercase;
       letter-spacing: 2px;
@@ -386,89 +514,73 @@
       min-height: 260px;
       padding: 30px;
       border-radius: 20px;
-      background: linear-gradient(
-        180deg,
-        rgba(255,255,255,0.05),
-        rgba(255,255,255,0.02)
-      );
-      border: 1px solid rgba(255,255,255,0.08);
+      background:
+        linear-gradient(
+          180deg,
+          rgba(255,255,255,0.045),
+          rgba(255,255,255,0.02)
+        );
+      border: 1px solid rgba(255,255,255,0.07);
       transition: 0.35s;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .card::before {
-      content: "";
-      position: absolute;
-      width: 120px;
-      height: 120px;
-      top: -40px;
-      right: -40px;
-      background: radial-gradient(circle, rgba(0,168,255,0.18), transparent 70%);
     }
 
     .card:hover {
-      transform: translateY(-10px);
-      border-color: rgba(0,168,255,0.35);
-      box-shadow: 0 25px 60px rgba(0,0,0,0.25);
+      transform: translateY(-8px);
+      border-color: rgba(0,181,255,0.32);
+      box-shadow: 0 25px 55px rgba(0,0,0,0.22);
     }
 
     .card-number {
-      color: #00b8ff;
-      font-size: 0.85rem;
-      margin-bottom: 35px;
+      color: #17c8ff;
+      margin-bottom: 34px;
+      font-size: 0.84rem;
     }
 
     .card h3 {
-      font-size: 1.35rem;
       margin-bottom: 12px;
+      font-size: 1.3rem;
     }
 
     .card p {
-      color: #8e9aaa;
-      line-height: 1.6;
-      font-size: 0.95rem;
+      color: #8f9bab;
+      line-height: 1.65;
+      font-size: 0.96rem;
     }
 
     .cta {
       margin: 70px 7% 100px;
+      padding: 72px 40px;
       border-radius: 30px;
-      padding: 70px;
       text-align: center;
-      position: relative;
-      overflow: hidden;
-
       background:
-        radial-gradient(circle at 50% 0%, rgba(0,168,255,0.25), transparent 35%),
-        rgba(255,255,255,0.035);
-
-      border: 1px solid rgba(0,168,255,0.15);
+        radial-gradient(circle at 50% 0%, rgba(0,170,255,0.22), transparent 36%),
+        rgba(255,255,255,0.03);
+      border: 1px solid rgba(0,181,255,0.14);
     }
 
     .cta h2 {
-      font-size: clamp(2rem, 4vw, 4.2rem);
+      font-size: clamp(2.1rem, 4vw, 4.1rem);
       max-width: 900px;
       margin: 0 auto 20px;
     }
 
     .cta p {
-      color: #98a5b4;
       max-width: 650px;
       margin: 0 auto 30px;
+      color: #97a4b3;
       line-height: 1.7;
     }
 
     footer {
-      padding: 35px 7%;
-      border-top: 1px solid rgba(255,255,255,0.06);
-      color: #697585;
-      font-size: 0.9rem;
+      padding: 36px 7%;
       text-align: center;
+      color: #697786;
+      border-top: 1px solid rgba(255,255,255,0.06);
     }
 
     .reveal {
       opacity: 0;
-      transform: translateY(45px);
+      transform: translateY(36px);
       transition: 0.85s ease;
     }
 
@@ -501,7 +613,7 @@
       }
 
       .hero-visual {
-        height: 540px;
+        height: 560px;
       }
 
       .services {
@@ -510,10 +622,7 @@
     }
 
     @media (max-width: 600px) {
-      header {
-        padding: 0 5%;
-      }
-
+      header,
       .hero,
       section {
         padding-left: 5%;
@@ -528,14 +637,18 @@
         grid-template-columns: 1fr;
       }
 
+      .robot-shell {
+        width: 95%;
+        height: 540px;
+      }
+
+      .robot-body {
+        width: 285px;
+      }
+
       .cta {
         margin-left: 5%;
         margin-right: 5%;
-        padding: 50px 25px;
-      }
-
-      .robot-stage {
-        width: 95%;
       }
     }
   </style>
@@ -568,7 +681,9 @@
 
         <h1>
           Tecnologia que
-          <span class="gradient-text">transforma operação em crescimento.</span>
+          <span class="gradient-text">
+            transforma operação em crescimento.
+          </span>
         </h1>
 
         <p>
@@ -591,28 +706,41 @@
           </a>
 
         </div>
+
       </div>
 
       <div class="hero-visual reveal">
 
-        <div class="glow-orbit"></div>
+        <div class="visual-aura"></div>
+        <div class="orbit"></div>
 
-        <div class="robot-stage" id="robotStage">
+        <div class="robot-shell" id="robotStage">
 
-          <div class="robot-head">
-            <div class="robot-face">
-              <div class="robot-eye left"></div>
-              <div class="robot-eye right"></div>
+          <div class="particle p1"></div>
+          <div class="particle p2"></div>
+          <div class="particle p3"></div>
+          <div class="particle p4"></div>
+
+          <div class="robot">
+
+            <div class="robot-head">
+              <div class="robot-face">
+                <div class="eye left"></div>
+                <div class="eye right"></div>
+                <div class="sensor"></div>
+              </div>
             </div>
-          </div>
 
-          <div class="robot-neck"></div>
+            <div class="robot-neck"></div>
 
-          <div class="robot-body">
-            <div class="robot-core"></div>
+            <div class="robot-body">
+              <div class="robot-core"></div>
+            </div>
+
           </div>
 
         </div>
+
       </div>
 
     </section>
@@ -621,6 +749,7 @@
 
       <div class="section-title reveal">
         <span>Soluções</span>
+
         <h2>
           Tecnologia prática para transformar a rotina da sua empresa.
         </h2>
@@ -632,8 +761,8 @@
           <div class="card-number">01</div>
           <h3>Inteligência Artificial</h3>
           <p>
-            Aplicação de IA em processos, atendimento, análise, criação
-            e produtividade.
+            Aplicação de IA em processos, atendimento,
+            produtividade e criação.
           </p>
         </div>
 
@@ -641,8 +770,8 @@
           <div class="card-number">02</div>
           <h3>Automação Empresarial</h3>
           <p>
-            Automatize tarefas repetitivas e reduza o tempo gasto
-            em processos manuais.
+            Reduza tarefas manuais e transforme processos
+            repetitivos em fluxos inteligentes.
           </p>
         </div>
 
@@ -650,7 +779,7 @@
           <div class="card-number">03</div>
           <h3>Marketing Digital</h3>
           <p>
-            Estratégias para Instagram, posicionamento digital,
+            Estratégia para Instagram, posicionamento,
             alcance, engajamento e crescimento.
           </p>
         </div>
@@ -659,12 +788,13 @@
           <div class="card-number">04</div>
           <h3>Conteúdo Visual</h3>
           <p>
-            Criação e edição de imagens, campanhas, posts,
+            Criação e edição de imagens, campanhas,
             identidade visual e conteúdo para redes sociais.
           </p>
         </div>
 
       </div>
+
     </section>
 
     <section class="cta reveal" id="contato">
@@ -674,8 +804,9 @@
       </h2>
 
       <p>
-        A KodexIA une tecnologia, automação e estratégia digital
-        para transformar processos e ampliar resultados.
+        A KodexIA combina automação, inteligência artificial
+        e estratégia digital para transformar processos
+        e ampliar resultados.
       </p>
 
       <a
@@ -695,12 +826,10 @@
   </footer>
 
   <script>
-
     const mouseLight = document.getElementById("mouseLight");
     const robotStage = document.getElementById("robotStage");
 
     document.addEventListener("mousemove", (event) => {
-
       mouseLight.style.left = event.clientX + "px";
       mouseLight.style.top = event.clientY + "px";
 
@@ -715,34 +844,27 @@
 
       robotStage.style.transform =
         `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-
     });
 
     const revealElements =
       document.querySelectorAll(".reveal");
 
-    const observer =
-      new IntersectionObserver(
-        entries => {
-
-          entries.forEach(entry => {
-
-            if (entry.isIntersecting) {
-              entry.target.classList.add("active");
-            }
-
-          });
-
-        },
-        {
-          threshold: 0.14
-        }
-      );
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("active");
+          }
+        });
+      },
+      {
+        threshold: 0.14
+      }
+    );
 
     revealElements.forEach(element => {
       observer.observe(element);
     });
-
   </script>
 
 </body>
